@@ -18080,6 +18080,10 @@ a .glyphicon.icon-after {
   margin-left: .25em;
 }
 
+.container-fluid.no-padding, .container.no-padding {
+  padding: 0;
+}
+
 .form-control {
   padding: 2px 6px;
 }
