@@ -1,0 +1,8 @@
+// dark canvas template
+%ffplc-dark-canvas-compact {
+  @include canvas-variant($background-color: $gray-darker);
+  @include text-variant($font-size-len: $font-size-small, $color: $gray-light);
+  a {
+    @include link-variant(white, $hover-decoration: underline dotted);
+  }
+}

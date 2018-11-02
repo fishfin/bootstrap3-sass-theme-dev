@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$font-path}ubuntu/ubuntu-light.eot');
+  src: url('#{$font-path}ubuntu/ubuntu-light.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntu/ubuntu-light.woff2') format('woff2'),
+       url('#{$font-path}ubuntu/ubuntu-light.woff') format('woff'),
+       url('#{$font-path}ubuntu/ubuntu-light.ttf') format('truetype'),
+       url('#{$font-path}ubuntu/ubuntu-light.svg#ubuntulight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$font-path}ubuntu/ubuntu-light-italic.eot');
+  src: url('#{$font-path}ubuntu/ubuntu-light-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntu/ubuntu-light-italic.woff2') format('woff2'),
+       url('#{$font-path}ubuntu/ubuntu-light-italic.woff') format('woff'),
+       url('#{$font-path}ubuntu/ubuntu-light-italic.ttf') format('truetype'),
+       url('#{$font-path}ubuntu/ubuntu-light-italic.svg#ubuntulight_italic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$font-path}ubuntu/ubuntu-regular.eot');
+  src: url('#{$font-path}ubuntu/ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntu/ubuntu-regular.woff2') format('woff2'),
+       url('#{$font-path}ubuntu/ubuntu-regular.woff') format('woff'),
+       url('#{$font-path}ubuntu/ubuntu-regular.ttf') format('truetype'),
+       url('#{$font-path}ubuntu/ubuntu-regular.svg#ubunturegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$font-path}ubuntu/ubuntu-italic.eot');
+  src: url('#{$font-path}ubuntu/ubuntu-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntu/ubuntu-italic.woff2') format('woff2'),
+       url('#{$font-path}ubuntu/ubuntu-italic.woff') format('woff'),
+       url('#{$font-path}ubuntu/ubuntu-italic.ttf') format('truetype'),
+       url('#{$font-path}ubuntu/ubuntu-italic.svg#ubuntuitalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('#{$font-path}ubuntu/ubuntu-bold.eot');
+    src: url('#{$font-path}ubuntu/ubuntu-bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}ubuntu/ubuntu-bold.woff2') format('woff2'),
+         url('#{$font-path}ubuntu/ubuntu-bold.woff') format('woff'),
+         url('#{$font-path}ubuntu/ubuntu-bold.ttf') format('truetype'),
+         url('#{$font-path}ubuntu/ubuntu-bold.svg#ubuntubold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$font-path}ubuntu/ubuntu-bold-italic.eot');
+  src: url('#{$font-path}ubuntu/ubuntu-bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntu/ubuntu-bold-italic.woff2') format('woff2'),
+       url('#{$font-path}ubuntu/ubuntu-bold-italic.woff') format('woff'),
+       url('#{$font-path}ubuntu/ubuntu-bold-italic.ttf') format('truetype'),
+       url('#{$font-path}ubuntu/ubuntu-bold-italic.svg#ubuntubold_italic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}

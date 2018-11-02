@@ -1,0 +1,43 @@
+// This is the central SCSS files that pulls in everything together.
+// You can pass in this file name to the built-in Gulp automation with this
+// to generate a CSS file of the same name. This CSS file can be used for
+// your site.
+// Developed by Fishfin (https://github.com/fishfin)
+// Year 2018
+// Licensed under the MIT license
+
+// >> --------------------------------------------------------------------------
+// Custom file paths. This is provided at beginning of this file so that once
+// the theme development is done, you can easily port it to your site's
+// location of various components with minimum change.
+
+// Where default Glyphicons that come with Bootstrap framework are
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+// Where custom fonts' scss  are stored (each font stored in its individual
+// directory within this directory), relative to CSS path.
+$font-path: '../fonts/';
+// Path to FontAwesome scss files
+@import "../../dist/fonts/fontawesome/scss/brands";
+@import "../../dist/fonts/fontawesome/scss/regular";
+@import "../../dist/fonts/fontawesome/scss/solid";
+@import "../../dist/fonts/fontawesome/scss/fontawesome";
+@import "fonts/fontawesome-icons-after";
+
+// ** Once theme development is complete, there should be no need for you to
+// ** modify anything below this.
+// << --------------------------------------------------------------------------
+
+@import "fonts";
+
+// Default variables. This is copied from
+// node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss and
+// customized.
+@import "variables-addl";
+@import "variables";
+
+// The core Bootstrap framework.
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Base-theme mods.
+@import "mods";
+@import "overrides";

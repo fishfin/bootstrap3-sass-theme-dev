@@ -1,0 +1,162 @@
+@mixin canvas-variant($background-color, $border-radius: 0
+    , $border-color: transparent, $border-style: solid, $border-width: 1px
+    , $no-clearfix: false) {
+  @if not $no-clearfix {
+    @include clearfix;
+  }
+  background-color: $background-color;
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-radius: $border-radius;
+}
+
+@mixin extend($str, $separator: ' ') {
+  $array: str-split($str, $separator);
+  @each $element in $array {
+    @if not ($element == '') {
+      @extend #{$element};
+    }
+  }
+}
+
+@mixin extend-fa-after($str, $separator: ' ') {
+  $array: str-split($str, $separator);
+  @each $element in $array {
+    @if not ($element == '') {
+      @if str-startswith($element, '.fa-') and not str-endswith($element, '-after') {
+        $element: $element + '-after';
+      }
+      @extend #{$element};
+    }
+  }
+}
+
+@mixin heading-variant($font-size-ln, $color: inherit
+    , $font-family: inherit, $font-weight: inherit, $line-height: $headings-line-height
+    , $small-font-size: $ffvar-heading-small-font-size, $small-color: $headings-small-color) {
+  color: $color;
+  font-size: $font-size-ln;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  margin: floor(($font-size-ln * $line-height) / 2) 0;
+  small,
+  .small {
+    color: $small-color;
+    font-size: $small-font-size;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+@mixin icon-variant($icon-class-str, $position: 'before', $color: inherit
+    , $margin: $icon-margin, $font-size-pct: $icon-font-size-pct) {
+  @if ($position == 'before') {
+    &:before {
+      color: $color;
+      font-size: $font-size-pct;
+      margin-right: $margin;
+      @include extend($icon-class-str);
+    }
+  } @else if ($position == 'after') {
+    &:after {
+      color: $color;
+      font-size: $font-size-pct;
+      margin-left: $margin;
+      @include extend-fa-after($icon-class-str);
+    }
+  } @else {
+    @error 'Position must be one of -before- or -after- (case-sensitive).';
+  }
+}
+
+@mixin input-variant($font-size-len: $font-size-base, $color: $input-color
+    , $background-color: $input-bg-color
+    , $color-placeholder: $input-color-placeholder, $background-color-disabled: $input-bg-color-disabled) {
+  font-size: $font-size-len;
+  color: $color;
+  background-color: $background-color;
+  @include placeholder($color-placeholder);
+}
+
+@mixin link-variant($color, $hover-color: null, $decoration: none, $hover-decoration: none
+    , $before-icon: null, $after-icon: null, $icon-color: inherit) {
+
+  @if not $hover-color {
+    $hover-color: $color;
+  }
+
+  color: $color;
+  background: transparent none;
+  text-decoration: $decoration;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    text-decoration: $hover-decoration;
+  }
+  &:focus {
+    @include tab-focus;
+  }
+  @if $before-icon {
+    @include icon-variant($icon-class-str: $before-icon, $position: 'before', $color: $icon-color);
+  }
+  @if $after-icon {
+    @include icon-variant($icon-class-str: $after-icon, $position: 'after', $color: $icon-color);
+  }
+}
+
+@mixin text-variant($font-size-len: $font-size-base, $color: inherit
+    , $font-family: inherit, $font-weight: inherit
+    , $line-height: $line-height-base
+    , $padding-vertical: null, $padding-horizontal: null
+    , $heading-color: inherit, $heading-font-family: inherit, $heading-font-weight: inherit) {
+
+  @if not $padding-vertical {
+    $padding-vertical: ceil($font-size-base / 3);
+  }
+  @if not $padding-horizontal {
+    $padding-horizontal: ceil($font-size-base / 3);
+  }
+
+  color: $color;
+  font-size: $font-size-len;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  padding: $padding-vertical $padding-horizontal;
+
+  h1, .h1 {
+    @include heading-variant(floor($font-size-len * 2.5), $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+  h2, .h2 {
+    @include heading-variant(floor($font-size-len * 2.15), $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+  h3, .h3 {
+    @include heading-variant(floor($font-size-len * 1.7), $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+  h4, .h4 {
+    @include heading-variant(floor($font-size-len * 1.25), $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+  h5, .h5 {
+    @include heading-variant($font-size-len, $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+  h6, .h6 {
+    @include heading-variant(ceil($font-size-len * 0.85), $heading-color, $heading-font-family
+        , $heading-font-weight);
+  }
+}
+
+@mixin fftpl-dark-canvas-compact() {
+  @include canvas-variant($background-color: $gray-darker);
+  @include text-variant($font-size-len: $font-size-small, $color: $gray-light);
+  a {
+    @include link-variant(white, $hover-decoration: underline dotted);
+  }
+}

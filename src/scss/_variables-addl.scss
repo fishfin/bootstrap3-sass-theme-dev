@@ -1,0 +1,35 @@
+// Carousel customization
+$carousel-btn-color: #000000;
+$carousel-btn-bg: #ffffff;
+$carousel-btn-border: #ffffff;
+$carousel-btn-color-hover: #ffffff;
+$carousel-btn-bg-hover: transparent;
+$carousel-btn-border-hover: #ffffff;
+$carousel-btn-padding-horizontal: 50px;
+
+// Icon customization
+$icon-font-size-pct: 80% !default;
+$icon-margin: 5px !default;
+
+//Input customization
+$input-padding-horizontal-base: 6px !default;
+
+// Heading customization
+$ffvar-heading-small-font-size: 75% !default;
+
+// Canvas customization
+$ffvar-canvas-reading: #ffffff !default;
+
+// Transition customization
+$transition-all: all 0.3s ease-in-out !default;
+
+// Button customization
+$btn-padding-horizontal-large: 25px !default;
+$btn-padding-horizontal-base: 20px !default;
+$btn-padding-horizontal-small: 10px !default;
+$btn-padding-horizontal-xs: 8px !default;
+
+// General customization
+$ffvar-darken-pct: 5% !default;
+$ffvar-lighten-pct: 5% !default;
+$ffvar-link-icon-class: 'fas fa-link' !default;

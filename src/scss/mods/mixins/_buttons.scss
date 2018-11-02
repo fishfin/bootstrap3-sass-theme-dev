@@ -1,0 +1,103 @@
+@mixin button-variant($color, $background-color, $border-color: null
+    , $color-event: null, $background-color-event: null, $border-color-event: null
+    , $color-disabled: null, $background-color-disabled: null, $border-color-disabled: null
+    , $color-badge: null, $background-color-badge: null
+    , $text-decoration: none) {
+
+  @include transition($transition-all);
+
+  @if not $border-color {
+    $border-color: $background-color;
+  }
+  @if not $color-event {
+    $color-event: $color;
+  }
+  @if not $background-color-event {
+    $background-color-event: $background-color;
+  }
+  @if not $border-color-event {
+    $border-color-event: $border-color;
+  }
+  @if not $color-disabled {
+    $color-disabled: $color;
+  }
+  @if not $background-color-disabled {
+    $background-color-disabled: $background-color;
+  }
+  @if not $border-color-disabled {
+    $border-color-disabled: $border-color;
+  }
+  @if not $color-badge {
+    $color-badge: $background-color;
+  }
+  @if not $background-color-badge {
+    $background-color-badge: $color;
+  }
+
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  text-decoration: $text-decoration;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active
+  {
+    color: $color-event;
+    background-color: $background-color-event;
+    border-color: $border-color-event;
+  }
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color-event;
+      background-color: $background-color-event;
+      border-color: $border-color-event;
+    }
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color-disabled;
+      background-color: $background-color-disabled;
+      border-color: $border-color-disabled;
+    }
+  }
+
+  .badge {
+    color: $color-badge;
+    background-color: $background-color-badge;
+  }
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius
+    , $icon-margin: $icon-margin) {
+  padding: $padding-vertical $padding-horizontal;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  // If there is minimal text in the button, making sure it is a square, border is always 1px so adding 2px
+  min-width: floor(($font-size * $line-height) + $padding-vertical + 2px);
+  font-size: $font-size;
+  .icon {
+    font-size: $icon-font-size-pct;
+  }
+  &.icon-before .glyphicon,
+  & .glyphicon.icon-before {
+    //margin-left: -$icon-margin;
+    margin-right: $icon-margin;
+  }
+  &.icon-after .glyphicon,
+  & .glyphicon.icon-after {
+    margin-left: $icon-margin;
+    //margin-right: -$icon-margin;
+  }
+}

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('#{$font-path}lobstertwo/lobstertwo-regular.eot');
+  src: url('#{$font-path}lobstertwo/lobstertwo-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}lobstertwo/lobstertwo-regular.woff2') format('woff2'),
+       url('#{$font-path}lobstertwo/lobstertwo-regular.woff') format('woff'),
+       url('#{$font-path}lobstertwo/lobstertwo-regular.ttf') format('truetype'),
+       url('#{$font-path}lobstertwo/lobstertwo-regular.svg#lobster_tworegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('#{$font-path}lobstertwo/lobstertwo-italic.eot');
+  src: url('#{$font-path}lobstertwo/lobstertwo-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}lobstertwo/lobstertwo-italic.woff2') format('woff2'),
+       url('#{$font-path}lobstertwo/lobstertwo-italic.woff') format('woff'),
+       url('#{$font-path}lobstertwo/lobstertwo-italic.ttf') format('truetype'),
+       url('#{$font-path}lobstertwo/lobstertwo-italic.svg#lobster_twoitalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('#{$font-path}lobstertwo/lobstertwo-bold.eot');
+  src: url('#{$font-path}lobstertwo/lobstertwo-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold.woff2') format('woff2'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold.woff') format('woff'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold.ttf') format('truetype'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold.svg#lobster_twobold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('#{$font-path}lobstertwo/lobstertwo-bold-italic.eot');
+  src: url('#{$font-path}lobstertwo/lobstertwo-bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold-italic.woff2') format('woff2'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold-italic.woff') format('woff'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold-italic.ttf') format('truetype'),
+       url('#{$font-path}lobstertwo/lobstertwo-bold-italic.svg#lobster_twobold_italic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}

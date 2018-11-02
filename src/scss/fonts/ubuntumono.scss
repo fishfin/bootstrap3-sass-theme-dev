@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('#{$font-path}ubuntumono/ubuntomono-regular.eot');
+  src: url('#{$font-path}ubuntumono/ubuntomono-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntumono/ubuntomono-regular.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/ubuntomono-regular.woff') format('woff'),
+       url('#{$font-path}ubuntumono/ubuntomono-regular.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/ubuntomono-regular.svg#ubuntu_monoregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('#{$font-path}ubuntumono/ubuntomono-italic.eot');
+  src: url('#{$font-path}ubuntumono/ubuntomono-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntumono/ubuntomono-italic.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/ubuntomono-italic.woff') format('woff'),
+       url('#{$font-path}ubuntumono/ubuntomono-italic.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/ubuntomono-italic.svg#ubuntu_monoitalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('#{$font-path}ubuntumono/ubuntomono-bold.eot');
+  src: url('#{$font-path}ubuntumono/ubuntomono-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold.woff') format('woff'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold.svg#ubuntu_monobold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('#{$font-path}ubuntumono/ubuntomono-bold-italic.eot');
+  src: url('#{$font-path}ubuntumono/ubuntomono-bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold-italic.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold-italic.woff') format('woff'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold-italic.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/ubuntomono-bold-italic.svg#ubuntu_monobold_italic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}

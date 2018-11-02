@@ -1,0 +1,66 @@
+.carousel-control {
+  &.left, &.right {
+    background-image: none;
+  }
+}
+
+.carousel-indicators {
+  bottom: 0;
+  margin-bottom: 5px;
+  li {
+    border-radius: 1px;
+    @include opacity($carousel-control-opacity);
+    @include transition(all 0.5s ease-in-out);
+    &:hover {
+      @include opacity(1);
+    }
+  }
+  li, .active {
+    width:  20px;
+    height: 6px;
+    margin: 0 3px;
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin-bottom: 3px;
+    font-size: ($font-size-base / 2);
+  }
+}
+
+.carousel-caption {
+  padding: 10px 0;
+  bottom: 20px;
+  h3 {
+    margin-top: 0;
+  }
+  .carousel-button {
+    vertical-align: top;
+    a {
+      margin: 2px 5px;
+      padding: $padding-base-vertical $carousel-btn-padding-horizontal;
+      display: inline-block;
+      text-decoration: none;
+      text-shadow: none;
+      border-radius: $btn-border-radius-base;
+      @include transition(all 0.3s ease-in-out);
+      color: $carousel-btn-color;
+      background-color: $carousel-btn-bg;
+      border: 1px solid $carousel-btn-border;
+      &:hover {
+        color: $carousel-btn-color-hover;
+        background-color: $carousel-btn-bg-hover;
+        border: 1px solid $carousel-btn-border-hover;
+      }
+    }
+    @media (max-width: $grid-float-breakpoint-max) {
+      a {
+        //padding: 0 ($padding-base-horizontal * 8);
+      }
+    }
+  }
+  @media (max-width: $grid-float-breakpoint-max) {
+    bottom: 15px;
+    p {
+      display: none;
+    }
+  }
+}
