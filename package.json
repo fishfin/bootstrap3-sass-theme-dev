@@ -14,7 +14,7 @@
     "url": "git://github.com/fishfin/bootstrap3-sass-theme-dev.git"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "colors": "^1.3.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
